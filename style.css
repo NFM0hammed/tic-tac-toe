@@ -1,0 +1,88 @@
+:root {
+    --mainColor: #168ce9;
+}
+
+body {
+    background-color: #FAFAFA;
+    font-family: sans-serif;
+}
+
+.tic-tac-toe {
+    text-align: center;
+    width: 500px;
+    margin: 50px auto;
+}
+
+.tic-tac-toe h1 {
+    color: var(--mainColor);
+}
+
+.tic-tac-toe .board {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    background-color: #FFF;
+    font-size: 40px;
+    padding: 15px 5px;
+    box-shadow: 0px 0px 10px #EEE;
+}
+
+.tic-tac-toe .board .cell {
+    color: var(--mainColor);
+    height: 100px;
+    padding: 40px 0 0;
+    cursor: default;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #000;
+}
+
+.border-left-rigth {
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+}
+
+.no-click {
+    pointer-events: none;
+}
+
+.result {
+    display: none;
+    position: fixed;
+    background-color: #00000099;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.result.end-game {
+    display: block;
+}
+
+.result span:first-of-type {
+    display: block;
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    margin: 100px 0px;
+}
+
+.result span:last-of-type {
+    position: absolute;
+    color: var(--mainColor);
+    background-color: #E1E1E1;
+    font-size: 40px;
+    padding: 3px 10px;
+    top: 50%;
+    left: 50%;
+    border: 2px solid;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.result span:last-of-type:hover {
+    background-color: #ffffff00;
+    color: #FFF;
+}
